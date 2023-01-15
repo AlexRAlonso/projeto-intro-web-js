@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>ADM</title>
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <img src="img/logo.png" alt="LabEscola logo" id="logo" />
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cursos.html">Cursos</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="adm.html">Area ADM</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div>
+        <section id="nav">
+          <nav>
+            <ul>
+              <li><a href="#section-classes">Turmas</a></li>
+              <li><a href="#section-registration">Matrículas</a></li>
+              <li><a href="#section-payment">Financeiro Alunos</a></li>
+            </ul>
+          </nav>
+        </section>
+      </div>
+
+      <div>
+        <section id="section-classes">
+          <section>
+            <input
+              type="number"
+              id="search"
+              placeholder="Digite o número da turma"
+            />
+            <label for="search"><button>Buscar</button></label>
+          </section>
+          <section id="class">
+            <h2>Hipátia</h2>
+            <ul>
+              <li><b>Curso:</b> JavaScript</li>
+              <li><b>Início:</b> 30/11/2022</li>
+              <li><b>Término:</b> 30/01/2023</li>
+              <li><b>Nº de alunos:</b> 150</li>
+              <li><b>Período:</b> Noturno</li>
+              <li><b>Concluído:</b> Não</li>
+            </ul>
+          </section>
+
+          <section id="class">
+            <h2>Sibyla</h2>
+            <ul>
+              <li><b>Curso:</b> JavaScript</li>
+              <li><b>Início:</b> 30/10/2022</li>
+              <li><b>Término:</b> 30/12/2022</li>
+              <li><b>Nº de alunos:</b> 200</li>
+              <li><b>Período:</b> Integral</li>
+              <li><b>Concluído:</b> Não</li>
+            </ul>
+          </section>
+
+          <section id="class">
+            <h2>Curie</h2>
+            <ul>
+              <li><b>Curso:</b> HTML e CSS</li>
+              <li><b>Início:</b> 15/09/2022</li>
+              <li><b>Término:</b> 15/10/2022</li>
+              <li><b>Nº de alunos:</b> 180</li>
+              <li><b>Período:</b> Noturno</li>
+              <li><b>Concluído:</b> Não</li>
+            </ul>
+          </section>
+
+          <section id="class">
+            <h2>Zhenyi</h2>
+            <ul>
+              <li><b>Curso:</b> HTML e CSS</li>
+              <li><b>Início:</b> 01/11/2022</li>
+              <li><b>Término:</b> 01/01/2023</li>
+              <li><b>Nº de alunos:</b> 80</li>
+              <li><b>Período:</b> Integral</li>
+              <li><b>Concluído:</b> Não</li>
+            </ul>
+          </section>
+
+          <section id="class">
+            <h2>Clarke</h2>
+            <ul>
+              <li><b>Curso:</b> HTML e CSS</li>
+              <li><b>Início:</b> 04/07/2022</li>
+              <li><b>Término:</b> 04/09/2022</li>
+              <li><b>Nº de alunos:</b> 200</li>
+              <li><b>Período:</b> Noturno</li>
+              <li><b>Concluído:</b> Sim</li>
+            </ul>
+          </section>
+
+          <section id="class">
+            <h2>Blackwell</h2>
+            <ul>
+              <li><b>Curso:</b> APIs Rest</li>
+              <li><b>Início:</b> 20/03/2022</li>
+              <li><b>Término:</b> 20/06/2022</li>
+              <li><b>Nº de alunos:</b> 100</li>
+              <li><b>Período:</b> Integral</li>
+              <li><b>Concluído:</b> Sim</li>
+            </ul>
+          </section>
+
+          <section id="class">
+            <h2>Elion</h2>
+            <ul>
+              <li><b>Curso:</b> APIs Rest</li>
+              <li><b>Início:</b> 12/01/2022</li>
+              <li><b>Término:</b> 12/06/2022</li>
+              <li><b>Nº de alunos:</b> 200</li>
+              <li><b>Período:</b> Noturno</li>
+              <li><b>Concluído:</b> Sim</li>
+            </ul>
+          </section>
+
+          <section id="class">
+            <h2>Burnell</h2>
+            <ul>
+              <li><b>Curso:</b> APIs Rest</li>
+              <li><b>Início:</b> 18/10/2022</li>
+              <li><b>Término:</b> 18/04/2023</li>
+              <li><b>Nº de alunos:</b> 90</li>
+              <li><b>Período:</b> Integral</li>
+              <li><b>Concluído:</b> Não</li>
+            </ul>
+          </section>
+        </section>
+
+        <section id="section-registration">
+          <section>
+            <h2>Matrículas</h2>
+            <form>
+              <section>
+                <label for="name">Nome</label>
+                <input type="text" id="name" />
+              </section>
+              <section>
+                <label for="course">Curso</label>
+                <input type="text" id="course" />
+              </section>
+              <section>
+                <label for="class">Turma</label>
+                <input type="text" id="class" />
+              </section>
+              <section>
+                <label for="installments">Nº de Parcelas</label>
+                <input type="number" id="installments" />
+              </section>
+              <button>Matricular estudante</button>
+            </form>
+          </section>
+
+          <section id="confirmation">
+            <h2>Matrícula de estudante efetivada!</h2>
+            <p>Matrícula de estudante efetivada</p>
+            <ul>
+              <li>Nome: Calvin Klein</li>
+              <li>Curso: JavaScript</li>
+              <li>Turma: Clarke</li>
+            </ul>
+          </section>
+        </section>
+
+        <section id="section-payment">
+          <section>
+            <h2>Financeiro</h2>
+            <form>
+              <section>
+                <label for="course">Curso</label>
+                <input
+                  type="text"
+                  value="JavaScript, HTML"
+                  data-role="tagsinput"
+                />
+                <a href="cursos.html">Adicionar outro curso</a>
+              </section>
+              <section>
+                <label for="installments">Nº de Parcelas</label>
+                <input type="number" id="installments" />
+              </section>
+              <button>Ver valor</button>
+            </form>
+          </section>
+
+          <section id="total-value">
+            <h2>Valor</h2>
+            <p>Desconto de 20%. Parcelas de 2x de R$ 1880,00</p>
+          </section>
+
+          <section id="student-report">
+            <h2>Relatório de estudante</h2>
+            <section id="search">
+                <label for="name">Nome</label>
+                <input type="search" id="name" />
+                <button>Buscar</button>
+            </section>
+            <section id="report">
+                <ul>
+                    <li>Estudante: Timothee Chalamet</li>
+                    <li>Turma: Hipátia</li>
+                    <li>Curso: JavaScript</li>
+                    <li>Valor total: R$ 900,00</li>
+                    <li>Valor das parcelas: R$ 100,00</li>
+                    <li>Nº de parcelas: 9</li>
+                </ul>
+            </section>
+          </section>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <img src="img/logo.png" alt="LabEscola logo" id="logo" />
+      <section id="address">
+        <h3>Endereço</h3>
+        <div class="mapouter">
+          <div class="gmap_canvas">
+            <iframe
+              width="600"
+              height="500"
+              id="gmap_canvas"
+              src="https://maps.google.com/maps?q=rua%20pais%20leme,%20215,%20pinheiros&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+            ></iframe
+            ><a href="https://123movies-to.org">123movies</a><br /><style>
+              .mapouter {
+                position: relative;
+                text-align: right;
+                height: 500px;
+                width: 600px;
+              }</style
+            ><a href="https://www.embedgooglemap.net"
+              >embedding google maps on website</a
+            ><style>
+              .gmap_canvas {
+                overflow: hidden;
+                background: none !important;
+                height: 500px;
+                width: 600px;
+              }
+            </style>
+          </div>
+        </div>
+        <p>R. Pais Leme, 215, CEP 05422-150 - Pinheiros, São Paulo - SP</p>
+      </section>
+
+      <section id="links">
+        <h3>Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cursos.html">Cursos</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contato.html">Fale conosco</a></li>
+          <li><a href="termos.html">Termos e condições</a></li>
+          <li><a href="privacidade.html">Política de privacidade</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </section>
+
+      <section id="social">
+        <h3>Redes sociais</h3>
+        <ul>
+          <li><a>LOGO TWITTER</a></li>
+          <li><a>LOGO LINKEDIN</a></li>
+          <li><a>LOGO FACEBOOK</a></li>
+          <li><a>LOGO INSTAGRAM</a></li>
+        </ul>
+      </section>
+
+      <section id="restricted">
+        <h3>Área restrita</h3>
+        <ul>
+          <li><a href="adm.html">Área administrativa</a></li>
+          <li><a href="portal.html">Espaço do aluno</a></li>
+        </ul>
+      </section>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
