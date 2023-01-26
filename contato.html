@@ -5,112 +5,114 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Contato</title>
+    <title>Home</title>
   </head>
   <body>
-    <header>
-      <a href="index.html">
-        <img src="img/logo.png" alt="LabEscola logo" id="logo" />
-      </a>
+    <header id="header">
+      <div id="logo" href="index.html">
+        <img
+          src="assets/logo-white.svg"
+          alt="LabEscola logo"
+          id="logo-immage"
+        />
+      </div>
       <nav>
-        <ul>
+        <ul id="header-nav">
           <li><a href="index.html">Home</a></li>
           <li><a href="cursos.html">Cursos</a></li>
           <li><a href="contato.html">Contato</a></li>
-          <li><a href="adm.html">Area ADM</a></li>
+          <li><a href="adm.html">Área ADM</a></li>
         </ul>
       </nav>
     </header>
 
-    <div>
-      <section id="contact">
+    <div class="whatsapp-logo"></div>
+
+    <section id="contact">
+      <div id="contact-box">
         <h2>Fale Conosco</h2>
-        <form>
-          <section>
+        <form id="contact-form">
+          <div>
             <label for="name">Nome</label>
-            <input type="text" id="name" />
-          </section>
-          <section>
+          </div>
+          <div>
+            <input type="text" id="contact-name" />
+          </div>
+          <div>
             <label for="email">E-mail</label>
-            <input type="email" id="email" />
-          </section>
-          <section>
+          </div>
+          <div>
+            <input type="email" id="contact-email" />
+          </div>
+          <div>
             <label for="message">Mensagem</label>
-            <input type="text" id="message" />
-          </section>
-          <button>Enviar</button>
+          </div>
+          <div>
+            <textarea type="text" id="contact-message"></textarea>
+          </div>
+          <button id="send-button">Enviar</button>
         </form>
-      </section>
-    </div>
+      </div>
+    </section>
 
     <footer>
-      <img src="img/logo.png" alt="LabEscola logo" id="logo" />
-      <section id="address">
-        <h3>Endereço</h3>
-        <div class="mapouter">
-          <div class="gmap_canvas">
+      <div>
+        <img
+          src="assets/logo-trans.svg"
+          alt="LabEscola logo"
+          id="footer-logo"
+        />
+      </div>
+      <div id="footer-elements">
+        <section id="footer-address">
+          <h3 id="footer-headers">Endereço</h3>
+
+          <div id="google-map" class="mapouter">
             <iframe
-              width="600"
-              height="500"
               id="gmap_canvas"
               src="https://maps.google.com/maps?q=rua%20pais%20leme,%20215,%20pinheiros&t=&z=13&ie=UTF8&iwloc=&output=embed"
               frameborder="0"
               scrolling="no"
               marginheight="0"
               marginwidth="0"
-            ></iframe
-            ><a href="https://123movies-to.org">123movies</a><br /><style>
-              .mapouter {
-                position: relative;
-                text-align: right;
-                height: 500px;
-                width: 600px;
-              }</style
-            ><a href="https://www.embedgooglemap.net"
-              >embedding google maps on website</a
-            ><style>
-              .gmap_canvas {
-                overflow: hidden;
-                background: none !important;
-                height: 500px;
-                width: 600px;
-              }
-            </style>
+            ></iframe>
           </div>
-        </div>
-        <p>R. Pais Leme, 215, CEP 05422-150 - Pinheiros, São Paulo - SP</p>
-      </section>
+          <p id="business-address">
+            R. Pais Leme, 215, CEP 05422-150, São Paulo - SP
+          </p>
+        </section>
 
-      <section id="links">
-        <h3>Links</h3>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="cursos.html">Cursos</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contato.html">Fale conosco</a></li>
-          <li><a href="termos.html">Termos e condições</a></li>
-          <li><a href="privacidade.html">Política de privacidade</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-        </ul>
-      </section>
+        <section id="footer-links">
+          <h3 id="footer-headers">Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cursos.html">Cursos</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contato.html">Fale conosco</a></li>
+            <li><a href="termos.html">Termos e condições</a></li>
+            <li><a href="privacidade.html">Política de privacidade</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </section>
 
-      <section id="social">
-        <h3>Redes sociais</h3>
-        <ul>
-          <li><a>LOGO TWITTER</a></li>
-          <li><a>LOGO LINKEDIN</a></li>
-          <li><a>LOGO FACEBOOK</a></li>
-          <li><a>LOGO INSTAGRAM</a></li>
-        </ul>
-      </section>
+        <section id="footer-social">
+          <h3 id="footer-headers">Redes sociais</h3>
+          <div id="social-box">
+            <img src="assets/twitter.svg" alt="twitter-logo" />
+            <img src="assets/linkedin.svg" alt="linkedin-logo" />
+            <img src="assets/face.svg" alt="facebook-logo" />
+            <img src="assets/insta.svg" alt="instagram-logo" />
+          </div>
+        </section>
 
-      <section id="restricted">
-        <h3>Área restrita</h3>
-        <ul>
-          <li><a href="adm.html">Área administrativa</a></li>
-          <li><a href="portal.html">Espaço do aluno</a></li>
-        </ul>
-      </section>
+        <section id="footer-restricted">
+          <h3 id="footer-headers">Área restrita</h3>
+          <ul>
+            <li><a href="adm.html">Área administrativa</a></li>
+            <li><a href="portal.html">Espaço do aluno</a></li>
+          </ul>
+        </section>
+      </div>
     </footer>
 
     <script src="data.js"></script>

@@ -1,0 +1,529 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  background-color: #f5c34a;
+}
+
+h1,
+h2,
+h3 {
+  font-family: system-ui;
+  margin: 0;
+}
+
+p,
+li,
+a,
+label,
+textarea {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+header {
+  height: 8vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 13vw;
+  margin-right: 13vw;
+}
+
+#logo-immage {
+  width: 18vw;
+}
+
+#header-nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2vw;
+  font-weight: bold;
+  font-size: 1.6em;
+  color: black;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  list-style-type: none;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer {
+  background-color: #f5c34a;
+  display: flex;
+  flex-direction: column;
+  flex: end;
+  gap: 2vw;
+  border-top: solid black 2px;
+}
+
+#footer-elements {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0vw 13vw 4vw 13vw;
+}
+
+#footer-logo {
+  margin-top: 2vw;
+  margin-left: 13vw;
+  width: 12vw;
+}
+
+#footer-headers {
+  line-height: 2vw;
+  font-size: 1.6em;
+}
+
+#gmap_canvas {
+  width: 23vw;
+  height: 14vw;
+  border: solid 0.1vw black;
+  line-height: normal;
+  margin-top: 1vw;
+}
+
+#business-address {
+  font-size: 0.8em;
+  line-height: 2vw;
+}
+
+#footer-links,
+#footer-restricted {
+  line-height: 2vw;
+  font-size: 1em;
+}
+
+#social-box {
+  margin-top: 2vw;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1vw;
+}
+
+.whatsapp-logo {
+  background-image: url(../projeto-intro-web-js/assets/zap.svg);
+  background-repeat: no-repeat;
+  background-position: center right;
+  position: fixed;
+  bottom: 2vw;
+  right: 2vw;
+  width: 100%;
+  height: 6em;
+}
+
+#novo-ensino {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../projeto-intro-web-js/assets/background-hero.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  line-height: 2.5em;
+  font-size: 2em;
+  height: 40vw;
+}
+
+#novo-ensino > p {
+  font-size: 1.2em;
+}
+
+#courses-button {
+  background-color: black;
+  color: white;
+  padding: 0vw 5vw;
+  border-radius: 0.5vw;
+  align-self: center;
+  font-weight: bold;
+  font-size: 0.8em;
+  margin-top: 4.5vw;
+}
+
+#about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3vw;
+  align-items: center;
+  background-color: black;
+  color: white;
+  font-size: 1.8em;
+  line-height: 2vw;
+  padding: 4vw 21vw;
+}
+
+#about > p {
+  font-size: 0.8em;
+}
+
+#testimonials {
+  background-color: black;
+  color: white;
+  font-size: 1.8em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 6vw;
+}
+
+#testimonials-tittle {
+  justify-content: center;
+}
+
+#testimonial-box {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: black;
+  padding: 2vw;
+}
+
+#testimonial {
+  width: 14vw;
+  margin: 0.6vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 0.5vw;
+  color: black;
+  padding: 1.5vw;
+  font-size: 0.6em;
+}
+
+#foto-estudante {
+  width: 6vw;
+  margin-bottom: 2vw;
+}
+
+#choose-course {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 6vw;
+}
+
+#about-courses {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 6vw;
+  padding: 6vw 10vw;
+}
+
+#about-course {
+  background-color: white;
+  width: 16em;
+  color: black;
+  border-radius: 0.5vw;
+  text-align: left;
+  font-size: 1.2em;
+  padding: 2vw;
+}
+
+#about-course > h2 {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 1.6em;
+  margin: 1vw 1vw 3vw 1vw;
+}
+
+#apply-button {
+  background-color: black;
+  color: white;
+  font-size: 1.6em;
+  border-radius: 0.5vw;
+  padding: 1.2vw 5vw;
+  font-weight: bolder;
+  text-align: center;
+}
+
+#summary {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10vw 6vw;
+  gap: 1.5vw;
+}
+
+#course-modules {
+  background-color: white;
+  color: black;
+  border-radius: 0.8vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2vw;
+  font-size: 1.2em;
+  width: 40em;
+  padding: 2vw 4vw;
+}
+
+#course-modules > h2 {
+  font-size: 1.8em;
+}
+
+#module > h3 {
+  font-weight: bolder;
+  font-size: 1.4em;
+}
+
+#contact {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  padding: 4vw;
+}
+
+#contact-box {
+  background-color: white;
+  color: black;
+  font-size: 1.1em;
+  padding: 3em;
+  width: 21em;
+  border-radius: 0.3vw;
+  display: flex;
+  gap: 1vw;
+  flex-direction: column;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+#contact-name,
+#contact-email {
+  width: 20em;
+  height: 2em;
+  border-radius: 0.25vw;
+  border-width: 0.15em;
+  font-size: 1em;
+  margin-top: 0.4em;
+  margin-bottom: 1.2em;
+}
+
+#contact-message {
+  width: 20em;
+  height: 7em;
+  border-radius: 0.25vw;
+  border-width: 0.15em;
+  font-size: 1em;
+  margin-top: 0.4em;
+  margin-bottom: 0.5em;
+  line-height: 2em;
+  resize: none;
+}
+
+#send-button {
+  background-color: #f5c34a;
+  font-weight: bolder;
+  font-size: 1em;
+  border-style: none;
+  border-radius: 0.4vw;
+  width: 20.6em;
+  height: 3.5em;
+}
+
+#adm-area {
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+}
+
+#nav {
+  grid-column: 1/2;
+  background-color: black;
+  color: white;
+  width: 12em;
+  font-weight: bold;
+  font-size: 1.3em;
+  line-height: 3em;
+  padding-top: 2vw;
+  padding-left: 7vw;
+}
+
+.adm-section {
+  grid-column: 2/3;
+}
+
+#section-classes {
+  display: block;
+}
+
+#section-registration,
+#section-payment {
+  display: none;
+}
+
+#subsection-adm-classes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6em;
+}
+
+::placeholder {
+  font-size: 1em;
+  font-weight: bold;
+  opacity: 50%;
+}
+
+#class-search {
+  width: 18em;
+  height: 2.5em;
+  border-radius: 0.2em 0em 0em 0.2em;
+  border-width: 0;
+  font-size: 1em;
+  padding-left: 1em;
+  margin-top: 3em;
+  margin-right: -0.3em;
+  vertical-align: bottom;
+}
+
+#search-class-button {
+  background-color: black;
+  color: white;
+  width: 6em;
+  height: 2.01em;
+  border-radius: 0em 0.2em 0.2em 0em;
+  font-size: 1.3em;
+  font-weight: bold;
+  vertical-align: bottom;
+  margin-right: 3em;
+}
+
+#classes-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 3vw 5vw 5vw 12vw;
+  gap: 2em;
+}
+
+.class {
+  background-color: white;
+  padding: 0.5vw 2vw;
+  border-radius: 0.6vw;
+  line-height: 1.5em;
+}
+
+.class > h2 {
+  text-align: center;
+}
+
+.subsection-adm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.adm-form {
+  padding: 3em;
+  font-size: 1.1em;
+  width: 21em;
+  border-radius: 0.3vw;
+  display: flex;
+  gap: 1vw;
+  flex-direction: column;
+  font-weight: bold;
+  margin-left: 2vw;
+  margin-bottom: 13vw;
+}
+
+#registration-box {
+  margin-left: 6vw;
+}
+
+#registration-button {
+  margin-top: 1.8vw;
+}
+
+.adm-input {
+  width: 18em;
+  height: 2em;
+  border-radius: 0.25vw;
+  border-width: 0;
+  font-size: 1em;
+  margin-top: 0.2em;
+  margin-bottom: 0.6em;
+}
+
+.adm-button {
+  background-color: black;
+  color: white;
+  border-radius: 0.4vw;
+  font-weight: bold;
+  font-size: 1em;
+  width: 18em;
+  height: 2.7em;
+  margin-top: 1vw;
+}
+
+#confirmation {
+  display: flex;
+  align-items: flex-start;
+  gap: 1em;
+  margin-right: 6.6vw;
+  padding: 3.4em;
+}
+
+#confirmation-message {
+  line-height: 1.8em;
+  align-items:flex-end;
+  font-size: 1.1em;
+}
+
+#check-mark {
+  width: 3em;
+  margin-top: -0.5em
+}
+
+#payment-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#add-more {
+  font-weight: normal;
+  text-decoration: underline;
+  font-size: 0.9em;
+  line-height: 0.6vw;
+}
+
+#installments-input {
+  margin-top: 1vw;
+}
+
+#payment-box {
+  width: 30vw;
+  margin-left: 9vw;
+  padding-right: 0;
+}
+
+#total-value, #report {
+  font-weight: normal;
+  font-size: 1.2em;
+  line-height: 2em;
+  margin-top: 2vw;
+}
+
+#student-report {
+  padding-left: 0vw;
+}
+

@@ -44,6 +44,18 @@ console.log(buscarEstudante(estudantes, "Timothee Chalamet")); */
 
 ////////////////////////////////////////////////////////////////
 
+const goToSection = (sectionId) => {
+  const sections = document.getElementsByClassName("adm-section");
+
+  for (let i = 0; i < sections.length; i++) {
+    sections[i].style.display = "none";
+  }
+
+  document.getElementById(sectionId).style.display = "block";
+};
+
+////////////////////////////////////////////////////////////////
+
 const buscarTurma = (arr, nome) => arr.filter((obj) => obj.turma === nome)[0];
 
 console.log(buscarTurma(turmas, "Hipátia"));
@@ -63,7 +75,7 @@ console.log(buscarEstudante(estudantes, "TiM"));
 
 /* const buscarCurso = (arr, nome) => arr.filter(obj => obj.curso === nome)[0]; */
 
-const buscarCurso = (arr, nome) => arr.find(obj => obj.curso === nome);
+const buscarCurso = (arr, nome) => arr.find((obj) => obj.curso === nome);
 
 console.log(buscarCurso(cursos, "JavaScript"));
 
