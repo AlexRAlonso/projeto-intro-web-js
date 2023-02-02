@@ -21,7 +21,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="cursos.html">Cursos</a></li>
           <li><a href="contato.html">Contato</a></li>
-          <li><a href="adm.html">Área ADM</a></li>
+          <li><a href="adm.html"><u>Área ADM</u></a></li>
         </ul>
       </nav>
     </header>
@@ -30,15 +30,15 @@
       <section id="nav">
         <ul>
           <li>
-            <a href="#" onclick="goToSection('section-classes')">Turmas</a>
+            <a class="adm-item adm-item-selected" id="adm-classes" href="#" onclick="goToSection('section-classes', 'adm-classes')">Turmas</a>
           </li>
           <li>
-            <a href="#" onclick="goToSection('section-registration')"
+            <a class="adm-item" id="adm-registration" href="#" onclick="goToSection('section-registration', 'adm-registration')"
               >Matrículas</a
             >
           </li>
           <li>
-            <a href="#" onclick="goToSection('section-payment')"
+            <a class="adm-item" id="adm-payment" href="#" onclick="goToSection('section-payment', 'adm-payment')"
               >Financeiro Alunos</a
             >
           </li>
@@ -47,18 +47,22 @@
 
       <section class="adm-section" id="section-classes">
         <div id="subsection-adm-classes">
-          <div>
+          
+          <div id="class-search-field">
             <input
-              type="number"
+              type="text"
               id="class-search"
-              placeholder="Digite o número da turma"
+              placeholder="Digite o nome ou número da turma"
             />
             <label for="search"
-              ><button id="search-class-button">Buscar</button></label
+              ><button onclick="handleClassSearch()" id="search-class-button">
+                Buscar
+              </button></label
             >
           </div>
+
           <section id="classes-list">
-            <div class="class">
+            <div class="class" id="hipatia">
               <h2>Hipátia</h2>
               <ul>
                 <li><b>Curso:</b> JavaScript</li>
@@ -70,7 +74,7 @@
               </ul>
             </div>
 
-            <div class="class">
+            <div class="class" id="sibyla">
               <h2>Sibyla</h2>
               <ul>
                 <li><b>Curso:</b> JavaScript</li>
@@ -82,7 +86,7 @@
               </ul>
             </div>
 
-            <div class="class">
+            <div class="class" id="curie">
               <h2>Curie</h2>
               <ul>
                 <li><b>Curso:</b> HTML e CSS</li>
@@ -94,7 +98,7 @@
               </ul>
             </div>
 
-            <div class="class">
+            <div class="class" id="zhenyi">
               <h2>Zhenyi</h2>
               <ul>
                 <li><b>Curso:</b> HTML e CSS</li>
@@ -106,7 +110,7 @@
               </ul>
             </div>
 
-            <div class="class">
+            <div class="class" id="clarke">
               <h2>Clarke</h2>
               <ul>
                 <li><b>Curso:</b> HTML e CSS</li>
@@ -118,7 +122,7 @@
               </ul>
             </div>
 
-            <div class="class">
+            <div class="class" id="blackwell">
               <h2>Blackwell</h2>
               <ul>
                 <li><b>Curso:</b> APIs Rest</li>
@@ -130,7 +134,7 @@
               </ul>
             </div>
 
-            <div class="class">
+            <div class="class" id="elion">
               <h2>Elion</h2>
               <ul>
                 <li><b>Curso:</b> APIs Rest</li>
@@ -142,7 +146,7 @@
               </ul>
             </div>
 
-            <div class="class">
+            <div class="class" id="burnell">
               <h2>Burnell</h2>
               <ul>
                 <li><b>Curso:</b> APIs Rest</li>
@@ -182,27 +186,19 @@
                   id="registration-installments"
                 />
               </section>
-              <button class="adm-button" id="registration-button">
+              <button
+                onclick="matricular()"
+                class="adm-button"
+                id="registration-button"
+              >
                 Matricular estudante
               </button>
             </form>
           </section>
 
           <section id="confirmation">
-            <div id="confirmation-message">
-              <h2>Matrícula de estudante efetivada!</h2>
-              <ul>
-                <li>Matrícula efetivada:</li>
-                <li>Nome: Calvin Klein</li>
-                <li>Curso: JavaScript</li>
-                <li>Turma: Clarke</li>
-              </ul>
-            </div>
-            <img
-              src="assets/check-green.svg"
-              alt="check-mark"
-              id="check-mark"
-            />
+            <div id="confirmation-message"></div>
+            <div id="checkmark"></div>
           </section>
         </div>
       </section>
@@ -215,13 +211,12 @@
               <label for="course">Curso</label>
               <input
                 type="text"
-                value="JavaScript, HTML"
                 data-role="tagsinput"
                 class="adm-input"
                 id="courses-basket-input"
               />
               <div id="add-more">
-                <a href="cursos.html">Adicionar outro curso</a>
+                <a onclick="addCarrinho()">Adicionar outro curso</a>
               </div>
 
               <div id="installments-input">
@@ -230,32 +225,34 @@
               <div>
                 <input type="number" class="adm-input" id="installments" />
               </div>
-              <button class="adm-button">Ver valor</button>
+              <button
+                onclick="addCarrinho(); parcelarCurso()"
+                class="adm-button"
+              >
+                Ver valor
+              </button>
             </form>
 
-            <section id="total-value">
+            <section id="total-value"></section>
+
+            <section id="total-value-sum"></section>
+
+            <!-- <section id="total-value">
               <h2>Valor</h2>
               <p>Desconto de 20%. Parcelas de 2x de R$ 1880,00</p>
-            </section>
+            </section> -->
           </section>
 
           <section class="adm-form" id="student-report">
             <h2>Relatório de estudante</h2>
             <section id="search">
               <label for="name">Nome</label>
-              <input type="search" class="adm-input" id="name" />
-              <button class="adm-button">Buscar</button>
+              <input type="search" class="adm-input" id="student-name" />
+              <button onClick="relatorioEstudante()" class="adm-button">
+                Buscar
+              </button>
             </section>
-            <section id="report">
-              <ul>
-                <li>Estudante: Timothee Chalamet</li>
-                <li>Turma: Hipátia</li>
-                <li>Curso: JavaScript</li>
-                <li>Valor total: R$ 900,00</li>
-                <li>Valor das parcelas: R$ 100,00</li>
-                <li>Nº de parcelas: 9</li>
-              </ul>
-            </section>
+            <section id="report"></section>
           </section>
         </div>
       </section>
@@ -304,10 +301,10 @@
         <section id="footer-social">
           <h3 id="footer-headers">Redes sociais</h3>
           <div id="social-box">
-            <img src="assets/twitter.svg" alt="twitter-logo" />
-            <img src="assets/linkedin.svg" alt="linkedin-logo" />
-            <img src="assets/face.svg" alt="facebook-logo" />
-            <img src="assets/insta.svg" alt="instagram-logo" />
+            <a href="https://twitter.com/home" target="_blank"><img src="assets/twitter.svg" alt="twitter-logo"/></a>
+            <a href="https://linkedin.com/home" target="_blank"><img src="assets/linkedin.svg" alt="linkedin-logo" /></a>
+            <a href="https://facebook.com/home" target="_blank"><img src="assets/face.svg" alt="facebook-logo" /></a>
+            <a href="https://instagram.com/home" target="_blank"><img src="assets/insta.svg" alt="instagram-logo" /></a>
           </div>
         </section>
 
